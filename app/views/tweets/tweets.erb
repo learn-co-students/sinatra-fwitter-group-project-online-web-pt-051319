@@ -1,0 +1,7 @@
+<h1>Here are my tweets!!!!!</h1>
+<%= @current_user.username %>
+
+<% Tweet.all.each do |tweet| %>
+<ol>
+<li> <%+ tweet.content%></p>
+  <% end %>
