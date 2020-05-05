@@ -1,0 +1,12 @@
+<h1>Login to Fwitter!</h1>
+
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+
+<h3>Login</h3>
+<form method="post" action="/login">
+  <input type="text" name="username" placeholder="Username:">
+  <input type="password" name="password" placeholder="Password:">
+  <input class="btn btn-primary" type="submit" value="Submit!" id="submit">
+</form>
