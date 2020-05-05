@@ -1,0 +1,15 @@
+<h3><%= @user.username %>!</h3>
+
+<a href="/tweets/new">New tweet?</a><br>
+<a href="/logout">Log Out</a>
+
+<% if @user.id == session[:user_id] %>
+  <p> Here are your tweets, <%= @user.username %>
+<% else %>
+    <h4>Tweets:</h4>
+      <ul>
+        <% @user.tweets.each do |t| %>
+          <li>"#{t.id}"<%= t.content %></li>
+        <% end %>
+      </ul>
+<% end %>
