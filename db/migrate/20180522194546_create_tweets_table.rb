@@ -1,7 +1,7 @@
-class CreateTweets < ActiveRecord::Migration
+class CreateTweetsTable < ActiveRecord::Migration
   def change
     create_table :tweets do |t|
-      t.string :content
+      t.text :content
       t.integer :user_id
 
       t.timestamps null: false
